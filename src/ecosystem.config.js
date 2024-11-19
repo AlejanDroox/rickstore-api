@@ -1,13 +1,13 @@
-module.exports = {
+export default {
     apps: [
       {
         name: 'mi-servidor-whatsapp',
-        script: './app.ts', // Asegúrate de que este sea el archivo correcto
+        script: 'dist/app.js', // Cambia a la ruta del archivo JavaScript compilado
         instances: 1,
-        exec_mode: 'fork', // O 'cluster' si quieres usar múltiples instancias
-        watch: false, // Cambia a true si deseas reiniciar en cambios
+        exec_mode: 'fork',
+        watch: false,
         env: {
-          NODE_ENV: 'production', // Puedes agregar otras variables de entorno si es necesario
+          NODE_ENV: 'production',
         },
       },
     ],
