@@ -2,6 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'api-whatsapp2',
+      args: "src/app.ts",
       script: "./node_modules/.bin/tsm",
       instances: 'max',
       exec_mode: 'cluster',
