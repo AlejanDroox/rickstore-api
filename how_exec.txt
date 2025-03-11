@@ -1,1 +1,1 @@
-pm2 start --interpreter tsm src/app.ts --name "nombre-de-tu-app"
+pm2 start --interpreter tsm src/app.ts --name "API"
