@@ -1,14 +1,17 @@
 module.exports = {
   apps: [
     {
-      name: "API",
-      script: "./node_modules/.bin/ts-node",
-      args: "src/app.ts",
-      exec_mode: 'fork',
-      watch: false, // Opcional: habilita el modo de vigilancia
+      name: 'API',
+      script: 'src/app.ts',
+      interpreter: 'node',
+      interpreter_args: '-r ts-node/register',
+      watch: true,
       env: {
-        NODE_ENV: "production"
-      }
-    }
-  ]
+        NODE_ENV: 'development',
+      },
+      env_production: {
+        NODE_ENV: 'production',
+      },
+    },
+  ],
 };
