@@ -2,10 +2,9 @@ module.exports = {
   apps: [
     {
       name: "API",
-      script: "./node_modules/.bin/tsm",
+      script: "./node_modules/.bin/ts-node",
       args: "src/app.ts",
-      instances: 'max',
-      exec_mode: 'cluster',
+      exec_mode: 'fork',
       watch: false, // Opcional: habilita el modo de vigilancia
       env: {
         NODE_ENV: "production"
